@@ -13,10 +13,10 @@ from numba.typed import List
 from numba import njit
 from numba import prange
 from scipy.spatial import Delaunay
-obstruct = np.load("/content/soph/obstruct.npy")
-obstruct_u = np.load("/content/soph/obstruct_u.npy")
-obstruct_v = np.load("/content/soph/obstruct_v.npy")
-obstruct_copy = np.load("/content/soph/obstruct_copy.npy")
+obstruct = np.load("/content/andp/obstruct.npy")
+obstruct_u = np.load("/content/andp/obstruct_u.npy")
+obstruct_v = np.load("/content/andp/obstruct_v.npy")
+obstruct_copy = np.load("/content/andp/obstruct_copy.npy")
 spec = [("x", float64),("y",float64),("u",float64),("v",float64),("radius",float64),("list_pos",int64)]
 @jitclass(spec)
 class Particle():
