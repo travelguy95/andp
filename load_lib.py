@@ -71,7 +71,7 @@ def run_code(rows,cols,steps,obstruct=np.array([[]]),obstruct_u=np.array([[]]),o
   radius = 0.25 
   water_width = 50
   water_height = 190
-  top = 66. 
+  top = 0.
   for row in range(0,int(190/(2*radius))):
     for col in range(0,int(50/(2*radius))):
       anti_row = int(rows/(2*radius))-row 
@@ -88,7 +88,6 @@ def run_code(rows,cols,steps,obstruct=np.array([[]]),obstruct_u=np.array([[]]),o
       particle.v = particle.v + dt*g
       particle.x = particle.x + particle.u*dt
       particle.y = particle.y + (-1*particle.v)*dt
-    top = top + 0.03*3 
     for count in range(0,1): 
       for i, particle in enumerate(my_particles):
         border_collide(particle,rows,cols,dt,top)
